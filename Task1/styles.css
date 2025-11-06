@@ -1,0 +1,176 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    --sb-width: 5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    background-color: #fff;
+    transition: var(--sb-width) 0.4s ease-in-out;
+}
+
+body.sb-expanded {
+    --sb-width: 12.5rem;
+}
+
+/* Headings & text */
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+/* Sidebar styling */
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 1rem;
+    width: var(--sb-width);
+    background-image: linear-gradient(#90c3fd, #ba71ff, #ff71b8);
+    transition:
+        width 0.4s ease-in-out,
+        transform 0.4s ease-in-out,
+        opacity 0.3s ease-in-out;
+    z-index: 1000;
+    overflow-x: hidden;
+}
+
+/* Nav layout */
+nav {
+    height: 100%;
+}
+
+nav ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 0.25rem;
+}
+
+nav li:last-child {
+    margin-top: auto;
+}
+
+/* Nav links */
+nav a {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.625rem 0.875rem;
+    font-size: 1.1rem;
+    line-height: 1;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition:
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        padding-left 0.3s ease-in-out;
+}
+
+/* Hover and focus */
+nav a:hover,
+nav a:active,
+nav a:focus-visible {
+    outline: none;
+    color: #b366fc;
+    background-color: #fff;
+}
+
+/* ✅ Highlight Dashboard */
+nav a.active {
+    background-color: #fff;
+    color: #b366fc;
+    font-weight: bold;
+}
+
+/* Sidebar text visibility */
+nav a span {
+    font-size: 0.875rem;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.4s ease-in-out,
+        visibility 0.4s ease-in-out;
+}
+
+/* When expanded */
+body.sb-expanded nav a span {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Icon animation */
+body.sb-expanded aside .fa-angle-double-left {
+    transform: rotate(180deg);
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Main content */
+main {
+    margin-left: var(--sb-width);
+    padding: 1rem 2rem;
+    transition: margin-left 0.4s ease-in-out;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    aside {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 12.5rem; /* fixed width for mobile slide */
+        background-image: linear-gradient(#90c3fd, #ba71ff, #ff71b8);
+        transform: translateX(0);
+        transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    /* Slide in when expanded */
+    body.sb-expanded aside {
+        transform: translateX(0);
+    }
+
+    main {
+        margin-left: 0;
+        padding: 1rem;
+        transition: filter 0.3s ease-in-out;
+    }
+
+    /* ✅ Dim background overlay only when sidebar is open */
+    body.sb-expanded::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        opacity: 1;
+        pointer-events: auto;
+        transition: opacity 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    /* Ensure overlay is hidden by default */
+    body::before {
+        content: "";
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease-in-out;
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expandable Sidebar</title>
+    <script src="https://kit.fontawesome.com/2900900a84.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="sb-expanded">
+
+        <aside>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" class="active">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-at"></i>
+                            <span>Chat</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-gear"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-wpforms"></i>
+                            <span>Contact Form</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-resize-btn>
+                            <i class="fas fa-angle-double-left"></i>
+                            <span>Collpase</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    
+        <main>
+            <h1>This is My Expandable Sidebar</h1>
+            <p>
+                This is a expandable sidebar. This can be used to store items.
+                This is an expandable sidebar. This is an expandable side bar.
+                This is my homepage. I can put my content here.
+                This is my homepage.
+            </p>
+        </main>
+
+        <script>
+            const resizeBtn = document.querySelector('[data-resize-btn]');
+
+            resizeBtn.addEventListener('click', function(e) {
+                e.preventDefault(); /*used to block the default behaviour*/
+                document.body.classList.toggle('sb-expanded');
+            });
+
+            window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+            // On desktop, sidebar should always be visible and expanded
+            document.body.classList.add('sb-expanded');
+            } else {
+            // On mobile, sidebar starts hidden until toggled
+            document.body.classList.remove('sb-expanded');
+            }
+            });
+
+        </script>
+    </body>
+
+</html>
