@@ -2,4 +2,9 @@
 
 The main aim for this was to create a contact form which would be responsive for all screen sizes - as well as including interactive elements and basic validation via JavaScript!
 
-🧠Tools Used: HTML, CSS and JavaScript
+## 🛠 Tools Used: 
+HTML, CSS and JavaScript
+
+## 💡 Features:
+- Javascript Validation
+- Easy to use form input
