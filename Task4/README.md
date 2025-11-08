@@ -5,7 +5,8 @@ The main aim for this task was to create a landing page for a Tech-product or a 
 For this - I created a landing page for a fictional SaaS tool - TripEase, which is a booking platform to book trips and tours with ease. I also managed to create a toggle which would switch from light mode
 to dark mode in terms of accesibility. I also made it responsive
 
-🛠Tools Used: HTML, CSS, Flexbox/Grid, JavaScript
+## 🛠Tools Used
+HTML, CSS, Flexbox/Grid, JavaScript
 
 ## 💡 Features
 - Expanding/collapsing sidebar with smooth transition
