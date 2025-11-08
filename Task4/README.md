@@ -6,3 +6,9 @@ For this - I created a landing page for a fictional SaaS tool - TripEase, which 
 to dark mode in terms of accesibility. I also made it responsive
 
 🛠Tools Used: HTML, CSS, Flexbox/Grid, JavaScript
+
+## 💡 Features
+- Expanding/collapsing sidebar with smooth transition
+- Responsive layout
+- Simple, clean user interface
+- Ability to toggle from light to dark mode through a switch
