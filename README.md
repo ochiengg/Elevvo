@@ -1,4 +1,4 @@
-# Elevvo Pathways One-Month Internship
+# Elevvo Pathways Front-End Web Development Internship
 This project folder contains all my codes for my one-month Internship at Elevvo Pathways. This involved a series of short projects in the area of Front-Web Development and implementing various tools such as HTML, CSS, Flexbox/Grid and Javascript.
 
 ## 🧠Purpose for this Repository
