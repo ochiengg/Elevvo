@@ -23,4 +23,5 @@ Contains HTML, CSS and JavaScript files demonstrating a responsive landing page 
 - **Tools & Libraries:** Microsoft VS Code, Git/GitHub
 - **Other Skills:** Responsive Web Design, Code Organization, UI/UX Design
 
+## 🧠 About
 This repository serves as a portfolio of my internship work, demonstrating practical skills, coding proficiency and problem-solving skills that have been acquired during the Elevvo Pathways program.
